@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <script src="main.js" defer></script>
+    <style type="text/css">
+      @import url("reset.css");
+    </style>
+    <link rel="styleSheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <h1 class="header__logo">
+        <a></a>
+      </h1>
+    </header>
+    <section id="game">
+      <div class="game__container">
+        <button class="game__title">😈GAME START👿</button>
+        <div class="game__info">
+          <span class="game__time">Time limit : 10s</span>
+          <span class="game__score">Score : 0</span>
+        </div>
+        <div class="game__info2">
+          <small class="game__presenter">It is a presenter:</small>
+          <h2 class="game__word">cow</h2>
+          <input class="game__input" placeholder="Please enter a word..." />
+        </div>
+        <!-- <div class="game__init">G O ?</div> -->
+      </div>
+
+      <div class="game__keybord"></div>
+    </section>
+  </body>
+</html>

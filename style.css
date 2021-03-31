@@ -1,0 +1,175 @@
+/* Global */
+:root{
+    /* Color */
+  --color-one:#dddddd;
+  --color-two:#f9f3f3;
+  --color-three:#f7d9d9
+  --color-four:#fe5287
+
+  --color-five:#fff3e6
+}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing:border-box;
+}
+
+button{
+  border:none;
+}
+
+#header{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  height:80px;
+  background-color:#151515;
+}
+
+/* #header .header__logo > a {
+  display:block;
+  width:360px;
+  height:100px;
+  background:url("./images/logo2.png") center/cover no-repeat;
+} */
+
+#game{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100vh;
+  background-color:#301b3f;
+}
+
+#game .game__container{
+  width:550px;
+  /* height:auto; */
+  height:50px;
+  margin:0 auto;
+  padding:20px 0;
+  background-color:#3c415c;
+  color:#fff;
+}
+
+#game .game__title{
+  display:block;
+  width:90%;
+  margin:0 auto;
+  border-radius:4px;
+  background-color:#151515;
+  color:#fff;
+  font-size:32px;
+  font-weight:bold;
+  text-align: center;
+  line-height:1.4em;
+  transition:all 0.3s;
+}
+
+#game .game__title:hover{
+  background-color:#fff;
+  color:#151515;
+  animation:game-start 0.4s both;
+}
+
+@keyframes game-start {
+  from{
+    letter-spacing:-2.4px;
+  }
+  to{
+    letter-spacing:2.4px;
+  }
+}
+
+@keyframes start-mode{
+  from{
+    height:50px;
+  }
+  to{
+    height:230px;
+  }
+}
+
+@keyframes show-info{
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes end-mode{
+  from{
+    height:230px;
+  }
+  to{
+    height:50px;
+  }
+}
+
+@keyframes hide-info{
+  from{
+    opacity:1;
+  }
+
+  to{
+    opacity:0;
+  }
+}
+
+
+#game .game__info,
+#game .game__info2{
+  opacity:0;
+}
+
+#game .game__info{
+  display:flex;
+  justify-content:space-between;
+  width:90%;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+#game .game__time,
+#game .game__score{
+  font-size:19px;
+}
+
+#game .game__info2{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game .game__presenter{
+  font-size:16px;
+  letter-spacing: 2.2px;
+  margin-bottom:10px;
+}
+
+#game .game__word{
+  margin-bottom:20px;
+  font-size:32px;
+  font-weight:bold;
+}
+
+#game .game__input{
+  width:50%;
+  height:40px;
+  margin:0 auto;
+  padding-left:15px;
+  color:#151515;
+  font-size:18px;
+  font-weight:bold;
+}
+
+#game .game__keybord{
+  width:400px;
+  height:200px;
+  border:10px solid black;
+}
