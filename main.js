@@ -10,6 +10,7 @@ const gameWord = document.querySelector('.game__word');
 const GAME_DURATION_SEC = 10;
 let status = true;
 let val = '';
+let words = '';
 
 gameBtn.addEventListener('click', ()=>{
   startMode();
@@ -17,9 +18,20 @@ gameBtn.addEventListener('click', ()=>{
 });
 
 gameInput.addEventListener('keydown', (e)=>{
-  let aword = e.key;
-  let bword = aword.concat(`${aword}`);
-  console.log(bword);
+  let presenter = gameWord.innerText;
+  if(e.keyCode >= 65 && 90 >= e.keyCode ){
+    let word = e.key;
+    words = words + word;
+  }
+
+  if(e.keyCode === 8){ //Backspace
+    console.log(words.length);
+    console.log("back");
+  }
+
+  if(presenter === words){
+    console.log("정답");
+  }
 });
 
 function startMode(){
