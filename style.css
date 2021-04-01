@@ -18,20 +18,6 @@ button{
   border:none;
 }
 
-#header{
-  display:flex;
-  justify-content: center;
-  width:100%;
-  height:80px;
-  background-color:#151515;
-}
-
-/* #header .header__logo > a {
-  display:block;
-  width:360px;
-  height:100px;
-  background:url("./images/logo2.png") center/cover no-repeat;
-} */
 
 #game{
   display:flex;
@@ -44,8 +30,8 @@ button{
 }
 
 #game .game__container{
+  position:relative;
   width:550px;
-  /* height:auto; */
   height:50px;
   margin:0 auto;
   padding:20px 0;
@@ -70,16 +56,16 @@ button{
 #game .game__title:hover{
   background-color:#fff;
   color:#151515;
-  animation:game-start 0.4s both;
 }
 
-@keyframes game-start {
-  from{
-    letter-spacing:-2.4px;
-  }
-  to{
-    letter-spacing:2.4px;
-  }
+#game .game__title.active{
+  background-color:#fff;
+  color:#151515;
+}
+
+#game .game__title.active:hover{
+  background-color:#151515;
+  color:#fff;
 }
 
 @keyframes start-mode{
@@ -168,8 +154,65 @@ button{
   font-weight:bold;
 }
 
+#game .end-game__container{
+  position:absolute;
+  top:0;
+  z-index:1;
+  display:none;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width:550px;
+  height:270px;
+  background-color:#3c415c;
+}
+
+#game .end-game__container.show{
+  display:flex;
+}
+
+#game .end-game__container > h1{
+  font-size:36px;
+  font-weight:bold;
+  letter-spacing: 2.2px;
+}
+
+#game .end-game__container > p{
+  padding:30px 0;
+  font-size:21px;
+  font-weight:bold;
+  letter-spacing: 2.2px;
+}
+
+#game .end-game__container > .replayBtn{
+  border:none;
+  background:none;
+  color:#fff;
+  font-size:32px;
+  font-weight:bold;
+  transition:color 0.2s;
+}
+
+#game .end-game__container > button:hover{
+  color:#151515;
+}
+
 #game .game__keybord{
-  width:400px;
-  height:200px;
-  border:10px solid black;
+  display:flex;
+  flex-direction: column;
+  width:550px;
+  height:150px;
+  background-color:#151515;
+  color:#fff;
+}
+
+#game .game__keybord > ul{
+  display:flex;
+  width:100%;
+}
+
+#game .game__keybord > ul > li{
+  padding:10px;
+  border:1px solid black;
+  font-size:20px;
 }
