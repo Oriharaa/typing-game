@@ -26,6 +26,7 @@ gameInput.addEventListener('keydown', (e)=>{
 
   if(e.keyCode === 8){ //Backspace
     console.log(words.length);
+    
     console.log("back");
   }
 
@@ -86,3 +87,4 @@ function endMode(){
   gameInfo.style.animation='hide-info 1s both';
   gameInfo2.style.animation='hide-info 1s both';
 };
+
