@@ -10,7 +10,7 @@
 사용자가 입력해야 할 제시어 단어들은 Random word api를 이용하였으며 그외 기능들은 순수자바스크립트를 사용하였습니다.
 <br/>
 
-👁 [URL 바로가기](https://oriharaa.github.io/typing-game/)
+👁 [URL 바로가기](https://cherryc0ck.github.io/typing-game/)
 <br/>
 <br/>
 
