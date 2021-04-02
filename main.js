@@ -37,7 +37,14 @@ gameBtn.addEventListener('click', ()=>{
   gameInput.focus();
 });
 
+
+gameInput.addEventListener('keyup', (e)=>{
+  effectKey(e);
+});
+
 gameInput.addEventListener('keydown', (e)=>{
+
+  effectKey(e);
   let presenter = gameWord.innerText;
 
   //a ~ z범위의 문자만 word, words에 저장됨.
@@ -62,6 +69,8 @@ gameInput.addEventListener('keydown', (e)=>{
 
 
 replayBtn.addEventListener('click',()=>{
+  getPresenter();
+  resetWords();
   updateTime(GAME_DURATION_SEC);
   updateScore(GAME_BASIC_SCORE)
   togglePopUp();
@@ -158,3 +167,18 @@ function getPresenter(){
     console.log('Fetch Error', err);
   });
 };
+
+function effectKey(e){
+  const virtualKey = document.getElementById(e.key);
+
+  switch(e.type){
+    case 'keydown' : 
+      virtualKey && virtualKey.classList.add('pressed');
+      e.key === 'Tab' && e.preventDefault();
+      break;
+
+    case 'keyup' : 
+      virtualKey && virtualKey.classList.remove('pressed');
+      break;
+  }
+}
