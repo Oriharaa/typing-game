@@ -15,6 +15,9 @@ const replayBtn = document.querySelector('.replayBtn');
 const GAME_DURATION_SEC = 10;
 const GAME_BASIC_SCORE = 0;
 
+const keySound = new Audio('./sound/keySound.wav');
+const errorSound = new Audio('./sound/error.MP3');
+
 let presenterArr = [];
 let words = '';
 let remainingTimeSec = GAME_DURATION_SEC;
@@ -39,6 +42,7 @@ gameBtn.addEventListener('click', ()=>{
 
 
 gameInput.addEventListener('keyup', (e)=>{
+  playSound(keySound);
   effectKey(e);
 });
 
@@ -59,6 +63,9 @@ gameInput.addEventListener('keydown', (e)=>{
     changePresenter();
     updateTime(remainingTimeSec+2);
     updateScore(++score);
+  }
+  else if(e.keyCode === 13 && presenter !== words){
+    playSound(errorSound);
   }
 
   //Backspace 눌렀을때 words 마지막 값 지워줌
@@ -182,3 +189,8 @@ function effectKey(e){
       break;
   }
 }
+
+function playSound(sound){
+  sound.currentTime = 0;
+  sound.play();
+};
