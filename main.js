@@ -158,7 +158,7 @@ function togglePopUp(){
 };
 
 function getPresenter(){
-  fetch('https://random-word-api.herokuapp.com/word?number=200')
+  fetch('https://random-word-api.herokuapp.com/word?number=300')
   .then(res => {
     return res.json();
   })
