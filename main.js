@@ -164,7 +164,6 @@ function getPresenter(){
   })
   .then(data => {
     data.forEach(item=>{
-      //난이도를 위하여 10자리로 제한
       if(item.length <= 10){
         presenterArr.push(item);
       }   
